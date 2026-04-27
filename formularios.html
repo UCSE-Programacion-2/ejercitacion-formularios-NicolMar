@@ -31,20 +31,88 @@
       </nav>
 
       <main class="page-main">
-        <!-- TODO: envolver el formulario en <form method="post" action="#"> -->
-        <!-- TODO: título «Añadí tu super!» y texto guía de la maqueta -->
-        <!-- TODO: campos Nombre (*), Especie (*), Fecha, Foto, Descripción -->
-        <!-- TODO: fieldset Poderes con 4 checkboxes -->
-        <!-- TODO: fieldset Tipo de personaje con radios name="tipo-personaje" -->
-        <!-- TODO: botón <button type="submit">Añadir</button> -->
-        <p class="placeholder-copy">
-          Reemplazá este párrafo por el formulario completo respetando la jerarquía del diseño de
-          referencia.
-        </p>
-      </main>
+  <section class="form-panel">
+    <h1>Añadí tu super!</h1>
+    <p>Agregá tu personaje favorito completando las opciones.</p>
+
+    <form method="post" action="#" class="hero-form">
+      <div class="form-content">
+        <div class="form-left">
+          <label for="nombre">*Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Nombre" required />
+            
+
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" />
+
+          <label for="descripcion">Descripción</label>
+          <textarea
+            id="descripcion"
+            name="descripcion"
+            placeholder="Descripción"
+          ></textarea>
+        </div>
+
+        <div class="form-right">
+          <label for="especie">*Especie</label>
+          <select id="especie" name="especie" required>
+            <option value="">Especie</option>
+            <option value="humano">Humano</option>
+            <option value="metahumano">Metahumano</option>
+            <option value="alien">Alien</option>
+            <option value="unknown">Unknown</option>
+          </select>
+
+          <label for="foto">Agregar Foto</label>
+          <input type="file" id="foto" name="foto" />
+
+          <fieldset>
+            <legend>Poderes</legend>
+
+            <label>
+              <input type="checkbox" name="poderes" value="volar" />
+              Volar
+            </label>
+
+            <label>
+              <input type="checkbox" name="poderes" value="superinteligencia" />
+              Superinteligencia
+            </label>
+
+            <label>
+              <input type="checkbox" name="poderes" value="vista-rayos-laser" />
+              Vista de rayos láser
+            </label>
+
+            <label>
+              <input type="checkbox" name="poderes" value="billetera-gorda" />
+              Billetera gorda
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Tipo de personaje</legend>
+
+            <label>
+              <input type="radio" name="tipo-personaje" value="heroe" />
+              Héroe / Heroína
+            </label>
+
+            <label>
+              <input type="radio" name="tipo-personaje" value="villano" />
+              Villano / Villana
+            </label>
+          </fieldset>
+        </div>
+      </div>
+
+      <button type="submit">Añadir</button>
+    </form>
+  </section>
+</main>
 
       <footer class="site-footer">
-        <p>Todos los derechos reservados - [TU NOMBRE Y APELLIDO]</p>
+        <p>Todos los derechos reservados - Karen Nicole Martinez</p>
         <a href="https://github.com/" class="footer-github">GitHub</a>
       </footer>
     </div>
